@@ -1,5 +1,5 @@
 <hmtl> 
-    <canvas id="canv" style="height: 300px; width: 400px;  
+    <canvas id="canv" style="height: 500px; width: 500px;  
                              border: 1px solid blue; 
                              padding-left: 0;
                              padding-right: 0;
@@ -17,8 +17,8 @@
     var arraypixel= new Array();
     console.log (canvas.width +" "+ canvas.height);
     
-   for (var i=0;i<=300;i+=size){
-        for (var j=0;j<=300;j+=size)
+   for (var i=0;i<=canvas.width;i+=size){
+        for (var j=0;j<=canvas.height;j+=size)
             {
                 if (Math.random() < 0.5){
                 var px =  new pixelLife(i,j,size,true);
@@ -56,7 +56,7 @@
         Update();
         stateUp();
         draw();
-        setTimeout(loop,30);
+        setTimeout(loop,1000);
     }
     loop();
 
